@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Matrix</title>
+</head>
+<body>
+    <h2>Alphabetic Matrix</h2>
+    <div id="matrixDisplay"></div>
+    <button onclick="displayMatrix()">click</button>
+    <script>
+        function displayMatrix(){
+            var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O","P", "Q", "R","S", "T", "U", "V", "W", "X", "Y", "Z"]
+           var n = prompt("Enter the input");
+            var len = n*n;
+            var matrixValues = [];
+            var result = [];
+            var count = 26;
+            
+            for(var i = 0; i < len; i++){
+                matrixValues.push(letters[i])
+            }
+            console.log(matrixValues);
+
+            for( j= 0; j < n; j++){
+                result.push(matrixValues.splice(0,n));  
+            }
+        
+            const finalResult = result[0].map((col, i) => result.map(row => row[i]));
+            console.log(finalResult.reverse());
+        }
+    </script>
+</body>
+</html>
