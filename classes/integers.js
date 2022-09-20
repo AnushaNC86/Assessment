@@ -7,8 +7,8 @@ class Stack {
         return this.items[this.items.length - 1];
     }
 
-    add(ele) {
-        return this.items.push(ele);
+    add(element) {
+        return this.items.push(element);
     }
 
     remove() {
@@ -29,9 +29,9 @@ class Stack {
 let stack = new Stack();
 stack.add(1);
 stack.add(2);
-stack.add(3);
 stack.add(4);
-console.log("stack items",stack.items);
+stack.add(7);
+console.log(stack.items);
 
 stack.remove();
 this.items = [5];
